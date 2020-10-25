@@ -5,7 +5,9 @@
   <main>
     <h2>Current count is : {{count}}</h2>
   </main>
-  <button (click)="handleReset()">Reset Count</button>
-  <button (click)="handleIncrease()">Increase Count</button>
-  <button (click)="handleDecrease()">Decrease Count</button>
+  <div class="button-container">
+    <button (click)="handleReset()">Reset Count</button>
+    <button (click)="handleIncrease()">Increase Count</button>
+    <button (click)="handleDecrease()">Decrease Count</button>
+  </div>
 </div>

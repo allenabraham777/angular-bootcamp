@@ -1,15 +1,22 @@
 .container {
   text-align: center;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100vh;
   color: aliceblue;
   margin-top: 30px;
 }
+.container h2,
+.container h1{
+  margin: 25px;
+}
 
 /* button style */
+.button-container {
+  padding: 50px;
+}
 button {
   color: #fff;
   padding: 5px 25px;
