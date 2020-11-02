@@ -25,7 +25,8 @@ export class AppComponent implements OnInit {
         console.log(this.user);
       },
       (err) => {
-        this.toastr.error(err.status, "Oops")
+        this.toastr.error(err.status, "Error in API, Reloading...")
+        setTimeout(()=>window.location.reload(), 500);
       }
     )
   }
