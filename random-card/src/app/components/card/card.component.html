@@ -1,0 +1,56 @@
+<div class="card">
+  <h3 class="text-success" [hidden]="!!user">
+    Loading .....
+  </h3>
+  <div class="card-body text-center" [hidden]="!user">
+    <img
+    [src]="user.picture.large"
+    height="150"
+    width="150"
+    class="rounded-circle img-thumbnail border-danger"
+    />
+    <div class="card-title text-primary">
+      <h3>
+        <span class="px-2">
+          {{user.name?.title}}
+        </span>
+        <span class="px-2">
+          {{user.name?.first}}
+        </span>
+        <span class="px-2">
+          {{user.name?.last}}
+        </span>
+      </h3>
+    </div>
+    <div class="card-text text-left px-4">
+      <fa-icon [icon]="faEnvelope"></fa-icon>
+      <span class="px-2">
+        {{ user.email }}
+      </span>
+    </div>
+    <div class="card-text text-left px-4">
+      <fa-icon [icon]="faMapMarkedAlt"></fa-icon>
+      <span class="px-2">
+        {{ user.location?.city }} {{ user.location?.state }}
+      </span>
+    </div>
+    <div class="card-text text-left px-4">
+      <fa-icon [icon]="faPhone"></fa-icon>
+      <span class="px-2">
+        {{ user.cell }}
+      </span>
+    </div>
+    <div class="card-text text-left px-4">
+      <fa-icon [icon]="faDatabase"></fa-icon>
+      <span class="px-2">
+        {{ user.registered?.date | date }}
+      </span>
+    </div>
+  </div>
+  <div class="card-body text-center mt-3">
+    <button class="btn btn-large btn-success" (click)="reload()">
+      <span class="pr-3">Reload</span>
+      <fa-icon [icon]="faUndo"></fa-icon>
+    </button>
+  </div>
+</div>
