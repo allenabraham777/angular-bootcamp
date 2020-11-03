@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "learn-angular-firebase-auth": {
+      "hosting": {
+        "github-login-firebase": [
+          "learn-angular-firebase-auth"
+        ]
+      }
+    }
+  }
+}
